@@ -121,7 +121,7 @@ body {
 .content {
     border-radius: 15px;
     background-color: var(--Dark-blue);
-    top: 30%;
+    top: 35%;
     position: absolute;
     width: 100%;
     padding: 10%;
@@ -159,6 +159,9 @@ body {
 }
 
  @media only screen and (max-width: 600px) {
+    .content {
+        top: 70%;
+    }
     .activity-tracker {
         row-gap: 10%;
     }
@@ -182,13 +185,4 @@ body {
     }
 }
 @media only screen and (max-width: 600px) {
-    .box {
-        margin-top: 25%;
-    }
-    .up {
-        margin-top: -15%;
-    }
-    .ex {
-        margin-top: -5%;
-    }
 }

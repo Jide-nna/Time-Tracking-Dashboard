@@ -160,4 +160,4 @@ buttons.forEach((button) => {
     //console.log(clickedOption)
   });
 });
-buttons[1].click()
+buttons[0].click()
