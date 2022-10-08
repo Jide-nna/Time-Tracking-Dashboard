@@ -144,7 +144,7 @@ const renderCards = (clickedOption) => {
     </header>
     <div class="activity__timeframes">
     <h1 class="activity__current-timeframes">${timeframeData.current}hrs</h1>
-    <h5 class+="activity__previous-timeframes">${previousTimeframe}-${timeframeData.previous}hrs</h5>
+    <h5 class="activity__previous-timeframes">${previousTimeframe}-${timeframeData.previous}hrs</h5>
     </div>
     `
     section.innerHTML = stringToInject
@@ -157,7 +157,7 @@ buttons.forEach((button) => {
     actiavteClickedButton(button);
     const clickedOption = button.dataset.option;
     renderCards(clickedOption);
-    //console.log(clickedOption)
+   // console.log(clickedOption)
   });
 });
 buttons[0].click()
