@@ -1,4 +1,4 @@
- let data = [
+let data = [
   {
     title: "Work",
     timeframes: {
@@ -109,19 +109,19 @@ const actiavteClickedButton = (button) => {
 };
 
 const clearActivities = () => {
-    const activities = document.querySelectorAll('.activity-tracker__activity')
-    //console.log(activities)
-    activities.forEach(a => a.remove())
-}
+  const activities = document.querySelectorAll(".activity-tracker__activity");
+  //console.log(activities)
+  activities.forEach((a) => a.remove());
+};
 const renderCards = (clickedOption) => {
-    clearActivities()
-    const activityTracker = document.querySelector("section.activity-tracker")
+  clearActivities();
+  const activityTracker = document.querySelector("section.activity-tracker");
   const calcTimeframe = (option) => {
     if (option === "daily") {
       return "Yesterday";
     } else if (option === "weekly") {
       return "Last Week";
-    } else  {
+    } else {
       return "Last Month";
     }
   };
@@ -131,8 +131,8 @@ const renderCards = (clickedOption) => {
     const timeframeData = activity.timeframes[clickedOption];
     const previousTimeframe = calcTimeframe(clickedOption);
     // console.log(previousTimeframe);
-    const section = document.createElement('section')
-    section.classList.add('activity-tracker__activity', activityClass)
+    const section = document.createElement("section");
+    section.classList.add("activity-tracker__activity", activityClass);
     const stringToInject = `
     <div class="top">
         <img src="./images/icon-${activityClass}.svg" alt="" class="image">
@@ -144,11 +144,11 @@ const renderCards = (clickedOption) => {
     </header>
     <div class="activity__timeframes">
     <h1 class="activity__current-timeframes">${timeframeData.current}hrs</h1>
-    <h5 class+="activity__previous-timeframes">${previousTimeframe}-${timeframeData.previous}hrs</h5>
+    <h5 class="activity__previous-timeframes">${previousTimeframe}-${timeframeData.previous}hrs</h5>
     </div>
-    `
-    section.innerHTML = stringToInject
-    activityTracker.append(section)
+    `;
+    section.innerHTML = stringToInject;
+    activityTracker.append(section);
     //console.log(section)
   });
 };
@@ -157,7 +157,7 @@ buttons.forEach((button) => {
     actiavteClickedButton(button);
     const clickedOption = button.dataset.option;
     renderCards(clickedOption);
-    //console.log(clickedOption)
+    // console.log(clickedOption)
   });
 });
-buttons[0].click()
+buttons[0].click();
